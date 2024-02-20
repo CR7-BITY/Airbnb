@@ -10,6 +10,7 @@ import diseño from "../img/diseño.jpg"
 import minicasa from "../img/minicasa.jpg"
 import playas from "../img/playas.jpg"
 import cabañas from "../img/cabañas.jpg"
+import "../index.css"
 
 const Menu = () => {
     return (
