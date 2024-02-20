@@ -1,4 +1,3 @@
-import React from "react"
 import habitaciones from "../img/habitaciones.png"
 import piscina from "../img/piscina.png"
 import casa_de_arbol from "../img/casa-del-arbol.png"

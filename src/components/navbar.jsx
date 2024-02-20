@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import { useState } from "react"
 import "../index.css"
 import Airbnb from "../img/Airbnb.png"
 import search from "../img/search.png"

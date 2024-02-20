@@ -1,4 +1,3 @@
-import React, { useEffect } from "react"
 import Navbar from "./navbar"
 import Menu from "./menu"
 import Inicio from "./inicio"
