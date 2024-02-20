@@ -4,17 +4,18 @@ import "react-phone-input-2/lib/style.css";
 import facebook from "../img/facebook.png";
 import google from "../img/google.png";
 import apple from "../img/apple.png";
-import email from "../img/email.png";
+import emails from "../img/emails.png";
 import movil from "../img/movil.png";
 import { signInWithPopup } from "firebase/auth";
 import { auth, googleProvider, facebookProvider } from "./firebase/config";
-import { RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth";
+import { RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth"; 
 
 const Login = ({ setRegistro }) => {
   const [email, setEmail] = useState(false);
   const [phone, setPhone] = useState("");
     const [user, setUser] = useState(null);
     const [otp, setOtp] = useState("");
+
   const cerrarPop = () => {
     setRegistro((var1) => !var1);
     
@@ -152,9 +153,9 @@ const Login = ({ setRegistro }) => {
             {!email ? (
               <div
                 onClick={() => setEmail(true)}
-                className="cursor-pointer hover:bg-gray-200 ml-5 w-11/12 p-3 mt-4 flex items-center border border-spacing-1 rounded-xl border-black"
+                className="cursor-pointer hover:bg  -gray-200 ml-5 w-11/12 p-3 mt-4 flex items-center border border-spacing-1 rounded-xl border-black"
               >
-                <img src={email} className="h-6 w-6 ml-3" />
+                <img src={emails} className="h-6 w-6 ml-3" />
                 <h1 className="ml-24">Continúa con gmail</h1>
               </div>
             ) : (
