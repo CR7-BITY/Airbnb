@@ -7,9 +7,7 @@ import user from "../img/user.png"
 import tierra from "../img/tierra.png"
 import Sesion from "./sesion"
 import Login from "./login"
-import { PropTypes } from "prop-types"
-
-const Navbar = () => {
+ const Navbar = () => {
 
   const [popUp,setPopUp] = useState(false)
   const [registro,setRegistro] = useState(false)
@@ -41,9 +39,6 @@ const Navbar = () => {
         {registro && <Login setRegistro={setRegistro}/>}
     </div>
   )
-}
-Navbar.propTypes = {
-  setRegistro: PropTypes.func.isRequired
 }
 
 export default Navbar

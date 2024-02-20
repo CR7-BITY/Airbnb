@@ -6,6 +6,7 @@ import google from "../img/google.png";
 import apple from "../img/apple.png";
 import emails from "../img/emails.png";
 import movil from "../img/movil.png";
+import PropTypes from 'prop-types';
 import {
   RecaptchaVerifier,
   signInWithPhoneNumber,
@@ -57,10 +58,6 @@ const Sesion = ({ setIniciar }) => {
       console.error(err);
     }
   };
-
-  const Registrado = ()=> {
-    <h2>FELICITACIONES, ESTAS REGISTRADO</h2>
-  }
 
   return (
     <div
@@ -149,7 +146,7 @@ const Sesion = ({ setIniciar }) => {
             </h1>
 
             {!phone && (
-              <button onClick={()=> {Registrado()}}
+              <button
               type="button"
               className="ml-5 text-white bg-rose-600 focus:ring-4 font-medium mt-3 rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none w-11/12 h-12"
               >
@@ -198,6 +195,9 @@ const Sesion = ({ setIniciar }) => {
       </div>
     </div>
   );
+};
+Sesion.propTypes = {
+setIniciar: PropTypes.func.isRequired,
 };
 
 export default Sesion;

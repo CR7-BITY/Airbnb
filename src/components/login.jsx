@@ -6,9 +6,9 @@ import google from "../img/google.png";
 import apple from "../img/apple.png";
 import emails from "../img/emails.png";
 import movil from "../img/movil.png";
-import { signInWithPopup } from "firebase/auth";
+import PropTypes from 'prop-types';
+import { signInWithPopup,RecaptchaVerifier,signInWithPhoneNumber } from "firebase/auth";
 import { auth, googleProvider, facebookProvider } from "./firebase/config";
-import { RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth"; 
 
 const Login = ({ setRegistro }) => {
   const [email, setEmail] = useState(false);
@@ -173,5 +173,8 @@ const Login = ({ setRegistro }) => {
     </div>
   );
 };
+  Login.propTypes = {
+    setRegistro: PropTypes.func.isRequired,
+  };
 
 export default Login;

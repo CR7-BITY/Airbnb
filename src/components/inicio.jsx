@@ -11,8 +11,8 @@ const Inicio = () => {
     }
   return (
     <div className="home rounded-t-xl ml-11 mt-7 overflow-hidden flex items-center gap-6 flex-wrap justify-center mb-[5rem]">
-      {casas.map((casa) => (
-        <>
+      {casas.map((casa, index) => (
+      <div key={index}>
           <Link to={`/casa/${casa.lugar.replace(/ /g, '-').toLowerCase()}`}  onClick={() => enviarACasa(casa)}>
             <img className="casas w-80 h-64 rounded-xl" src={casa.foto} alt="" />
           
@@ -33,7 +33,7 @@ const Inicio = () => {
             <h1 className="precio font-semibold">{casa.precio} noche</h1>
           </div>
           </Link>
-        </>
+        </div>
       ))}
     </div>
   );
